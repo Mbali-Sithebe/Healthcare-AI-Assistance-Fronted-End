@@ -96,11 +96,104 @@
       </section>
 
       <section id="consultations">
-        <!-- Consultations content here -->
+        <!-- Main consultation section -->
+        <section id="consultation">
+          <img src="./images/star.png" />
+          <h1>Consultation Chat Room</h1>
+          <img src="./images/star.png" />
+        </section>
+
+        <section id="chatBot">
+          <!-- Symptoms input -->
+          <aside id="symptoms">
+            <h2>Describe Your Symptoms</h2>
+            <!-- heading on top, not inside the box -->
+            <form id="symptoms-form">
+              <div id="info-box-1">
+                <p>Please describe what you are experiencing...</p>
+                <textarea
+                  id="chat-input"
+                  placeholder="Type your symptoms here..."
+                  rows="4"
+                ></textarea>
+              </div>
+            </form>
+            <div id="suggestions">
+              <button type="button">Headache</button>
+              <button type="button">Fever</button>
+              <button type="button">Period Pains</button>
+            </div>
+          </aside>
+
+          <!-- AI analysis output -->
+          <aside id="analysis">
+            <h2>AI ChatBot Analysis</h2>
+            <div id="info-box-2">
+              <p>
+                Based on your experience, you might be having the following:
+              </p>
+              <ul>
+                <li>Common Cold</li>
+                <li>Seasonal Allergies</li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Recommendations / Medications -->
+          <aside id="meds">
+            <h2>Recommendations</h2>
+            <div id="info-box-3">
+              <p>Suggested Medications</p>
+              <ul>
+                <li>Cetirizine</li>
+                <li>Acetaminophen</li>
+              </ul>
+            </div>
+            <div id="downloadBtn">
+              <button>Download Your Report</button>
+            </div>
+          </aside>
+        </section>
       </section>
 
+
+      <!-- Last Section -->
       <section id="features">
-        <!-- Features content here -->
+        <h1>The Key Features</h1>
+
+        <!-- Container to hold all three boxes side by side -->
+        <div class="features-container">
+          <aside class="feature-box">
+            <div class="title">
+              <i class="fa-solid fa-brain"></i>
+              <h2>AI - Powered Analysis</h2>
+            </div>
+            <p>
+              Advanced AI algorithms analyze your symptoms and provide accurate
+              insights.
+            </p>
+          </aside>
+
+          <aside class="feature-box">
+            <div class="title">
+              <i class="fa-solid fa-stethoscope"></i>
+              <h2>Real-Time Monitoring</h2>
+            </div>
+            <p>
+              Continuous monitoring ensures timely health updates and alerts.
+            </p>
+          </aside>
+
+          <aside class="feature-box">
+            <div class="title">
+              <i class="fa-solid fa-laptop-medical"></i>
+              <h2>Secure Data Storage</h2>
+            </div>
+            <p>
+              Your health data is stored securely and is accessible anytime.
+            </p>
+          </aside>
+        </div>
       </section>
     </main>
 
