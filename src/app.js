@@ -1,6 +1,6 @@
-//.1 JavaScript Navigation Bar
+//1. Generating JS Navigation Bar //
 
-// Array of all the menu items (single-page navigation)
+// Array of all menu items
 const menuItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -8,43 +8,44 @@ const menuItems = [
   { name: "Features", href: "#features" },
 ];
 
-// Function for the nav menu
+// Function to initialise the menu and highlight the current page
 function initialiseMenu(currentPage) {
-  const container = document.querySelector("#menu-container"); // use aside for accessibility
+  const container = document.querySelector("#menu-container");
+  container.innerHTML = "";
+
   const ul = document.createElement("ul");
   ul.classList.add("menu");
 
-  // Loop through menu items
-  for (let menuItem of menuItems) {
+  menuItems.forEach((menuItem) => {
     const li = document.createElement("li");
     li.classList.add("menu-item");
 
-    // Highlight current page, others are links
-    if (currentPage !== menuItem.name) {
+    if (menuItem.name.toLowerCase() === currentPage.toLowerCase()) {
+      // Active page
+      li.innerText = menuItem.name;
+      li.classList.add("active");
+    } else {
+      // Normal menu link
       const a = document.createElement("a");
       a.innerText = menuItem.name;
       a.setAttribute("href", menuItem.href);
       li.appendChild(a);
-    } else {
-      li.innerText = menuItem.name;
-      li.classList.add("active");
     }
 
     ul.appendChild(li);
-  }
+  });
 
-  // Append menu to container
   container.appendChild(ul);
 }
 
-// Call the function
+// Call the function with the current page
 initialiseMenu("Home");
 
-//2. Animating the warning header.
+//2. Animating The Warning Header. //
 
 gsap.from("#health-disclaimer p", { opacity: 0, duration: 5 });
 gsap.to("#health-disclaimer p", {
-  color: "#91C6CC",
+  color: "#0C5355",
   duration: 0.95,
   repeat: -1,
   yoyo: true,
