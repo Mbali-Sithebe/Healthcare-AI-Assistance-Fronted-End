@@ -39,3 +39,14 @@ function initialiseMenu(currentPage) {
 
 // Call the function
 initialiseMenu("Home");
+
+//2. Animating the warning header.
+
+gsap.from("#health-disclaimer p", { opacity: 0, duration: 5 });
+gsap.to("#health-disclaimer p", {
+  color: "#91C6CC",
+  duration: 0.95,
+  repeat: -1,
+  yoyo: true,
+  ease: "power1.inOut",
+});
