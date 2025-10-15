@@ -3,7 +3,6 @@
 // Array of all menu items
 const menuItems = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
   { name: "Consultations", href: "#consultations" },
   { name: "Features", href: "#features" },
 ];
@@ -45,7 +44,7 @@ initialiseMenu("Home");
 
 gsap.from("#health-disclaimer p", { opacity: 0, duration: 5 });
 gsap.to("#health-disclaimer p", {
-  color: "#0C5355",
+  color: "#70c5ce",
   duration: 0.95,
   repeat: -1,
   yoyo: true,
