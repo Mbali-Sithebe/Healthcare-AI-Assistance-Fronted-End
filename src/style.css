@@ -465,3 +465,21 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
+.back-to-home {
+  display: none; /* hidden initially */
+  position: fixed; /* floats over page content */
+  bottom: 3rem; /* distance from bottom */
+  right: 3rem; /* distance from right edge */
+  background: none; /* no decoration */
+  border: none;
+  color: #0d5153; /* icon color */
+  font-size: 2rem; /* icon size */
+  cursor: pointer;
+  z-index: 999; /* stays above everything */
+  transition: transform 0.3s ease;
+}
+
+.back-to-home:hover {
+  transform: translateY(-5px);
+}

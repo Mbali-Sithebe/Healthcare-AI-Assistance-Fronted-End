@@ -50,3 +50,25 @@ gsap.to("#health-disclaimer p", {
   yoyo: true,
   ease: "power1.inOut",
 });
+
+//3. Buttons Functionality
+
+/// Get the button
+let topBtn = document.querySelector(".back-to-home");
+
+// Show button on scroll
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+
+// Scroll smoothly to top when clicked
+topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
